@@ -68,6 +68,13 @@ num_vehicles = st.sidebar.slider(
     value=2,
     help="Number of vehicles in the fleet"
 )
+# User input for the depot
+index = st.sidebar.number_input(
+     "Enter Depot Index",
+    min_value=0,max_value=num_locations-1,
+     value=0, 
+     help="Enter the index of the depot location (0-based)"
+)
 
 # Method selection
 methods = st.sidebar.multiselect(
